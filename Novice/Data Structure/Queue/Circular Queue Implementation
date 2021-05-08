@@ -1,0 +1,80 @@
+//Implementation
+/*Types of Implementation of queue are :- 
+1. Circulat Array Based
+2. Linked List Based*/
+/*
+1.Circulat Array based
+max_size==arr.length();
+curr_size= curr_size+1 Enque;
+           curr_size-1 Deque;
+when they both become equal then queue is full
+Enque
+The n-1 idx is adjacent to 0th index. We make a circular array.
+In array based we will maintain two pointer.Front and rear. 
+On each addition of element rear move forward with that.When rear==front
+which is possible due to circular array based by performing some modular arithmetic
+rear=(rear+1)%n; where n is sized of array
+
+Deque can be also done in a same way.
+front=(front+1)%n 
+
+*/
+
+#include<iostream>
+using namespace std;
+class Queue{
+    
+        int *arr;
+        int ms; //maximum size
+        int cs; //current size
+        int front;
+        int rear;
+    public:    
+       Queue(int default_size =7){
+         this->front =0;  
+         this->rear = default_size-1; //So we will have rear at 6. So will increment it and take mode with 7. 
+         this->ms=default_size;
+         this->arr=new int[this->ms]();
+         this->cs=0;
+       }
+       
+       bool isFull(){
+           return this->cs==this->ms;
+       }
+       bool isEmpty(){
+           return this->cs==0;
+       }
+       void enqueue(int data){
+           if(!isFull()){
+               this->rear= (this->rear+1)%this->ms;
+               this->arr[this->rear]=data;
+               this->cs+=1;
+           }
+           
+       }
+       void dequeue(){
+           if(!isEmpty()){
+               this->front= (this->front+1)%this->ms;
+               this->cs-=1;
+           }
+       }
+       int getFront(){
+           return this->arr[this->front];
+       }
+};
+
+
+int main()
+{
+    Queue q(10);
+    for(int i=1;i<=6;i++){
+        q.enqueue(i);
+    }
+    q.dequeue();
+    q.enqueue(8);
+    while(!q.isEmpty()){
+        cout<<q.getFront()<<endl;
+        q.dequeue();
+    }
+    return 0;
+}

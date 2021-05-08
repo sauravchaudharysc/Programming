@@ -1,0 +1,40 @@
+//Lowest Common Ancestor In A Binary Tree
+//Element at each node is unique
+/*
+For any 2 nodes p and q if they exist inside the tree,the lowest or nearmost
+node which has both p and q as its descendents.Any node will be descendents 
+of itself.
+
+Time Complexity O(N)
+Space Complexity O(N)
+Here we are Traversing More than ONCE.
+We can extract the list of ancestor of p and q. Let the list corresponding to 
+p be l1 and q be l2.There is going to be prefix array between them such that 
+it has a common ancestor list. This prefix array will reprsent the list of 
+common ancestor so the last element inside the list will give the LCA.
+
+*SINGLE TRAVERSAL
+We need to traverse the tree in Depth First order i.e Preorder,Postorder
+
+LCA 
+Either the solution can be in left subtree 
+Either the solution can be in right subtree
+Either the solution can be the root/current node.
+
+LCA depends where p and q are lying. 
+Both p and q in my left subtree -> Inside my left subtree or root
+Both p and q in my right subtree -> Inside my right subtree or root
+Anyone or both of them are absent from my tree -> No answer
+One of them is inside left subtree and other is in right subtree. ->root
+Either p is lying in subtree of q or vice-versa. -> parent root
+
+We can create a custom class to do so :- 
+class custom{
+        bool hasKeyP; //P is present
+        bool hasKeyQ; //Q is present
+        Node *node;   //What is my LCA
+};
+
+Node will store what is LCA. The value of Node* will be NULL,till we havent
+found anything.
+*/

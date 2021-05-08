@@ -1,0 +1,22 @@
+1. Write the initial cost matrix and reduce it.Initial cost matrix contains the distance between the vertices of graph.If no edge exist then distance is infinity.
+2.Reduce the cost matrix in two steps.
+	<ul>
+	<li>
+		Row Reduction<br>
+		Reduce the matrix row wise.Consider the rows of matrix one by one and reduce them.In order to reduce the row of matrix.Check is the row reducible and the row can be reduced if zero isnt present in that row.If zero isnt present.Choose the smallest element in the row and subtract all the element in row by the samllest element and do this for all the rows.
+	</li>
+	<li>
+		Column Reduction<br>
+		The matrix obtained from row reduction is used here.In order to reduce the column of matrix.Check is the column reducible and the column can be reduced if zero isnt present in that column.If zero isnt present.Choose the smallest element in the column and subtract all the element in column by the samllest element and do this for all the column.
+	</li>
+3.So the all the smallest element sum used in reduction gives the cost of node.This gives the cost of first city.	
+4.Now use this reduced obtained matrix to traverse from first node to all other node.And calculate the cost of each city we visitas we did in 2 and we will the consider the city which provides the minimum cost.
+	<ul>
+	<li>
+	   Store cost of path from first city to new city we visit, by looking the value from the reduced matrix.And set the cost of first city to new city and new city to first city to INFINITY.Now we reduce the obtained matrix and get the reduced cost of current city.Add the current city reduced cost and previous city reduced cost and the path cost from previous city to current city.
+	</li>
+	<li>
+	</li>
+	</ul>
+
+5.Repeat step 4 the smallest city cost.And use the matrix of city from which we visit the current city.In Last step all the matrix element turns out to INFINITY and all the vertices are completely traversed. This gives the optimal path.

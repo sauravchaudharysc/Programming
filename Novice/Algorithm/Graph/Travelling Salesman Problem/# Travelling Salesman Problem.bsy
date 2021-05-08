@@ -1,0 +1,21 @@
+# Travelling Salesman Problem
+You have a travelling salesman and he have to travel set of cities.Salesman has to return to its
+original source from where he started. During his journey we have to minimize total distance travelled
+by him. 
+
+       The distance is given by adjacency matrix.
+        dist[i][j] = Gives the distance between two cities 
+                     if they are directly connected by an edge
+        dist[i][j] = If they are not connected then they are reprsented
+                     as INT_MAX.
+Note the difference between Hamiltonian Cycle and TSP. 
+We are talking about a hamiltonian cycle.Here we know that Hamiltonian Tour exists 
+(because the graph is complete). It means covering all the vertices once through set of edges 
+and we come back to the starting node. Output of a travelling salesman problem minimum weight hamiltonian 
+cycle.
+
+We can do this by Dynamic Programming using Top-Down Approach.It is an optimization to recursion. We use 
+memoization to avoid overlapping subproblems.
+
+And we can use bitmask to keep a record of cities visited so far.  
+   

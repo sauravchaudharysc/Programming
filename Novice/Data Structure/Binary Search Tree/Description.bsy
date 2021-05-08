@@ -1,0 +1,9 @@
+//Binary Search Tree
+Problem with the binary tree is that search is an expensive operation. Worst case 
+complexity to search will O(N).So for this case BST comes to picture.
+
+BST is a special type of Binary Tree . They are ordered. Element having less value are
+kept at left and greater at right. Each Sub-tree is a BST.
+
+In the worst case we have to travel the whole depth.O(logn) but in case of skewed it turns
+out to O(n).

@@ -1,0 +1,24 @@
+//BINARY TREE
+/*It is a non linear data structure.It is hierarchical data structure.
+On the basis on Insertion,deletion,searching and ordering we choose the data structure.
+
+A tree having atmost 2 nodes is called bianry tree.
+Starting node of the tree is called root. 
+And the other node are connected to it using pointer.
+
+Siblings
+A node having same parent
+
+Ancestor
+All the parents of a given node.
+
+Descendent
+All the node below the parent.
+
+Leaf node
+The nodes with zero children
+
+Application
+1.Computer Directories
+2.Company Position Heirarchy
+*/

@@ -1,0 +1,8 @@
+//Forward List
+/*Forward list are sequence containers that allow constant time insert and 
+  erase operation anywhere within the sequence.
+  The main difference between Forward list and List is that :-
+    1. Forward list is a single linked list.It contain one link which point to the next.
+    2. List is double linked list. It contain two links within them. 
+       One Pointing to the next and one to the previous.
+   */

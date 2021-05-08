@@ -1,0 +1,38 @@
+//Queue
+//It follows FIFO . First in First out. It is also linear data structure.
+//Elements are always added to back and removed from front.
+//Adding an Element is called enqueue
+//Removing an Element is called deque. 
+
+//Application
+/*
+In operating system algorithm.
+In asynchronized data transfer.
+*/
+//Implementation
+/*Types of Implementation of queue are :- 
+1. Circulat Array Based
+2. Linked List Based*/
+/*
+1.Circulat Array based
+max_size==arr.length();
+curr_size= curr_size+1 Enque;
+           curr_size-1 Deque;
+when they both become equal then queue is full
+Enque
+The n-1 idx is adjacent to 0th index. We make a circular array.
+In array based we will maintain two pointer.Front and rear. 
+On each addition of element rear move forward with that.When rear==front
+which is possible due to circular array based by performing some modular arithmetic
+rear=(rear+1)%n; where n is sized of array
+
+Deque can be also done in a same way.
+front=(front+1)%n 
+
+2.Linked List Based 
+It is also linear based data structure.There are various function in linked list 
+to add or remove element from linked list. Queue is based on first in first out fact.
+So we can use some linked list property and get benefitted with it.
+To deque we can use remove from head.
+To Enque we can use add at tail
+*/

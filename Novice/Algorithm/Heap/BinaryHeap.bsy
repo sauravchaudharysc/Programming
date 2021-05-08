@@ -1,0 +1,29 @@
+//Binary Heap
+/*A complete binary tree.The priority of child is less than that of parent.
+When there are 2 children the insert and delete is log2n. So we might think less 
+make the no of children more. Because it will reduce the height and ofcourse it does
+but the no of comparison increases. This will lead to decrease the no of comparison and 
+lead to the complexity greater than log2n. That why we are strictly sticking to binary 
+tree.
+*/
+
+Types of Heap
+1. Min Heap 
+    The value of parent is less than the values of children
+2. Max Heap
+    The values of childres in less than the value of parent.
+    
+How to represent heap ?
+Suppose we are having a min heap.Generally we can do that we can represent a heap in 
+form of array or vectors or list.
+In order to have comparison between parent and children we need to have acess to
+both the parent and children.
+            parent = i;
+            left_child=2*i+1;
+            right_child=2*i+2;
+            
+            If child is at j then 
+                parent = floor((j-1)/2)
+                
+I will fill the array or vector or list till the position it is required.I can store 
+everything in array by level order traversal.
